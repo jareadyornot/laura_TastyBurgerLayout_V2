@@ -1,0 +1,105 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Logo Layout */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 900;
+  line-height: 0.95;
+}
+
+.logo-top {
+  color: #7a1400;
+  font-size: 20px;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.logo-bottom {
+  color: #ff9900;
+  font-size: 22px;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 700;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #d9230f;
+}
+
+/* Right Container for Cart and Profile */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Cart Button */
+.cart-button {
+  background-color: #ff9900;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cart-button:hover {
+  background-color: #e58700;
+}
+
+/* Far Right Profile */
+.profile-container {
+  border: 1px solid #333333;
+  padding: 7px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.profile-container:hover {
+  background-color: #f5f5f5;
+}
+
+.profile-label {
+  font-weight: 700;
+  font-size: 13px;
+  color: #333333;
+}

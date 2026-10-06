@@ -9,6 +9,10 @@ interface Burger {
   imageUrl: string;
 }
 
+interface BurgerMenuProps {
+  onAddToCart: (burger: Burger, quantity: number) => void;
+}
+
 const allBurgers: Burger[] = [
   {
     id: 1,
@@ -71,7 +75,7 @@ const allBurgers: Burger[] = [
     name: 'The Big Boss Tower',
     description: 'Three beef patties, triple cheese, bacon rashers, fried egg, and special sauce.',
     price: '$15.99',
-    imageUrl: 'https://images.unsplash.com/photo-1583032015879-b9f3f2603c43?auto=format&fit=crop&w=600&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=600&q=80',
   },
   {
     id: 10,
@@ -82,7 +86,7 @@ const allBurgers: Burger[] = [
   },
 ];
 
-export const BurgerMenu = () => {
+export const BurgerMenu = ({ onAddToCart }: BurgerMenuProps) => {
   const [showAll, setShowAll] = useState(false);
   const [selectedBurger, setSelectedBurger] = useState<Burger | null>(null);
   const [quantity, setQuantity] = useState(1);
@@ -91,16 +95,18 @@ export const BurgerMenu = () => {
 
   const handleOpenModal = (burger: Burger) => {
     setSelectedBurger(burger);
-    setQuantity(1); // Reset quantity to 1 when opening modal
+    setQuantity(1);
   };
 
   const handleCloseModal = () => {
     setSelectedBurger(null);
   };
 
-  const handleAddToCart = () => {
-    alert(`Added ${quantity} x ${selectedBurger?.name} to cart!`);
-    handleCloseModal();
+  const handleConfirmAddToCart = () => {
+    if (selectedBurger) {
+      onAddToCart(selectedBurger, quantity);
+      handleCloseModal();
+    }
   };
 
   return (
@@ -144,7 +150,6 @@ export const BurgerMenu = () => {
         </button>
       </div>
 
-      {/* Modal Popup for Product Details */}
       {selectedBurger && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -171,7 +176,7 @@ export const BurgerMenu = () => {
                 />
               </div>
 
-              <button className="modal-add-button" type="button" onClick={handleAddToCart}>
+              <button className="modal-add-button" type="button" onClick={handleConfirmAddToCart}>
                 Add to Cart
               </button>
             </div>

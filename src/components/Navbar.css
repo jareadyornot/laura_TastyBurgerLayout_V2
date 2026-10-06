@@ -74,12 +74,27 @@
   background-color: #ff9900;
   color: #ffffff;
   border: none;
-  padding: 8px 18px;
   border-radius: 20px;
+  padding: 8px 14px;
   font-weight: 700;
   font-size: 13px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cart-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.cart-count {
+  font-size: 12px;
+  min-width: 16px;
+  text-align: center;
 }
 
 .cart-button:hover {

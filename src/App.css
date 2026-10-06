@@ -15,3 +15,43 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.home {
+  flex: 1;
+  width: 100%;
+  padding: 32px;
+}
+
+.site-introduction {
+  max-width: 700px;
+  margin: 28px auto 0;
+  padding: 24px 28px;
+  border-left: 4px solid #ff9900;
+  border-radius: 0 10px 10px 0;
+  background: #fff;
+  text-align: left;
+}
+
+.site-introduction h1 {
+  margin: 0 0 10px;
+  color: #7a1400;
+  font-size: clamp(24px, 4vw, 32px);
+  letter-spacing: -0.5px;
+}
+
+.site-introduction p {
+  color: #5e5149;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .home {
+    padding: 20px 14px;
+  }
+
+  .site-introduction {
+    margin-top: 20px;
+    padding: 20px;
+  }
+}

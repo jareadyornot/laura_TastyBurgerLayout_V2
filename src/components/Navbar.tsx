@@ -1,8 +1,7 @@
 import './Navbar.css';
 
 export const Navbar = () => {
-  const logoImageUrl = "https://imgs.search.brave.com/7xBvJX-VuKZdOqc59WFz6u6B0bclKcqKD6MTplkSj98/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZG41/LnZlY3RvcnN0b2Nr/LmNvbS9pL3RodW1i/cy84My80OS9idXJn/ZXItdmVyeS10YXN0/eS1sb2dvLWVtYmxl/bS1pY29uLXZlY3Rv/ci0yNTQ5ODM0OS5qcGc";
-
+  const logoImageUrl = "https://imgs.search.brave.com/TZc6lk4eiyO5tx9BBx-VAy2brvOx3drO58xDgU5zCsk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/bWFnbmlmaWMuY29t/L3ByZW1pdW0tdmVj/dG9yL3Rhc3R5LWhh/bmQtZHJhd24tYnVy/Z2VyLWZhc3QtZm9v/ZC1tb2Rlcm4tbG9n/b181MTM2NDAtMzc3/LmpwZz9zZW10PWFp/c19oeWJyaWQmdz03/NDAmcT04MA";
   return (
     <header className="navbar">
       {/* Brand Logo Container */}

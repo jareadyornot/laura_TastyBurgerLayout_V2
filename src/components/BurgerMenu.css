@@ -1,0 +1,275 @@
+.burger-menu-section {
+  max-width: 1100px;
+  margin: 48px auto 0;
+  padding: 0 16px;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.menu-header h2 {
+  color: #7a1400;
+  font-size: clamp(26px, 4vw, 36px);
+  margin-bottom: 8px;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.menu-header p {
+  color: #5e5149;
+  font-size: 16px;
+}
+
+.burger-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.burger-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgb(51 33 20 / 8%);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.burger-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgb(51 33 20 / 12%);
+}
+
+.burger-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.burger-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.burger-card:hover .burger-image {
+  transform: scale(1.05);
+}
+
+.burger-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.burger-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.burger-info h3 {
+  font-size: 16px;
+  color: #333333;
+  font-weight: 700;
+}
+
+.burger-price {
+  color: #7a1400;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.burger-desc {
+  color: #666666;
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.details-button {
+  background-color: #ff9900;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.details-button:hover {
+  background-color: #e58700;
+}
+
+.menu-action-container {
+  text-align: center;
+  margin-top: 36px;
+}
+
+.view-all-button {
+  background-color: transparent;
+  color: #7a1400;
+  border: 2px solid #7a1400;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-all-button:hover {
+  background-color: #7a1400;
+  color: #ffffff;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  animation: modalPop 0.2s ease-out;
+}
+
+@keyframes modalPop {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+  transition: background 0.2s ease;
+}
+
+.modal-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-image-container {
+  width: 100%;
+  height: 240px;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-details {
+  padding: 24px;
+}
+
+.modal-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+
+.modal-header-row h2 {
+  color: #7a1400;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.modal-price {
+  color: #ff9900;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.modal-desc {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.modal-quantity-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.modal-quantity-row label {
+  font-weight: 700;
+  color: #333333;
+  font-size: 14px;
+}
+
+.modal-quantity-row input {
+  width: 70px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.modal-add-button {
+  background-color: #ff9900;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal-add-button:hover {
+  background-color: #e58700;
+}
